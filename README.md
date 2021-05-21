@@ -38,3 +38,10 @@ docker exec -it mysql8 /bin/bash
 mysql -uroot -p
 
 docker network inspect bridge
+
+mysql -uroot -p --host=172.17.0.2
+
+docker image build -t python-web .
+docker run -p 5001:5000 -d python-web
+docker ps
+docker logs -f "id container pega pelo comando docker ps"
