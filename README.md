@@ -32,4 +32,9 @@ mysql -> docker2309
 
 docker run --name  mysql8 -e MYSQL_ROOT_PASSWORD=docker2309 -p 3308:3308 -d mysql:5.7
 
-docke ps -> exibe container rodando.
+docke ps -> exibe containes em andamento.
+docker exec -it mysql8 /bin/bash
+
+mysql -uroot -p
+
+docker network inspect bridge
