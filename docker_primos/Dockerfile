@@ -1,8 +1,8 @@
-FROM python:3.6.1-alpine
+FROM python:3.7-slim
 RUN pip install flask
+RUN mkdir templates
+RUN mkdir static
 COPY app.py /app.py
-COPY venv/* /venv/
-COPY templates/* /templates/
-COPY static/* /static/
-COPY requirements.txt /requirements.txt
+COPY templates/*  /templates/
+COPY static/*  /static/
 CMD ["python","app.py"]
